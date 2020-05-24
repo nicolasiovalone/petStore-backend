@@ -83,7 +83,7 @@ public class PetService {
 
         long quantityAfterDecrease = petDTO.getQuantity()-Integer.parseInt(quantity);
         if(quantityAfterDecrease < 0) {
-            throw new PetRepositoryException("Error : there isn't enought quantity");
+            throw new PetRepositoryException("Error : there isn't enough quantity");
         }
 
         petDTO.decreaseQuantity(Integer.parseInt(quantity));
